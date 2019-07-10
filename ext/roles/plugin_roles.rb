@@ -65,7 +65,7 @@ class FashionBot
       if event.message.author.roles.find {|r| r.name == role}
         event.send_message("only big kids can touch that role, cutie pie")
       else
-        event.send_message("")
+        event.send_message("tsk tsk tsk!")
       end
     end
   end
