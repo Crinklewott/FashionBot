@@ -4,6 +4,8 @@
 require 'discordrb'
 require 'yaml'
 
+require_relative 'lib/helper_api'
+
 # Configuration
 CONFIG = YAML.load_file('config.yaml')
 
@@ -104,6 +106,8 @@ class FashionBot
   def run(async = false)
     @bot.run(async)
   end
+
+  include HelperAPI
 end
 
 # Load plugins
