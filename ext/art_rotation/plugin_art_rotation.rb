@@ -53,6 +53,7 @@ class FashionBot
     if event.author.roles.find {|role| role.name == @art_rotation_config[:role]}
       if event.author.roles.find {|role| role.name == @art_rotation_config[:active_role]}
         event.send_message("ohh, well done!")
+        end_user_thread(event.author.id)
         next_user(event)
       else
         event.send_message("that's lovely! but it's not your turn, cutie")
